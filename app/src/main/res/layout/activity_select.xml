@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!-- head title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50sp"
+        android:paddingHorizontal="50sp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back_select"
+            android:layout_width="wrap_content"
+            android:layout_height="16sp"
+            android:src="@drawable/icon_back_arrow"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="              Select The Mode"
+            android:textSize="18sp"
+            android:textColor="#000E08"
+            android:fontFamily="@font/poppins_main"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <!--    divider  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:paddingHorizontal="50sp">
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="0.4"
+            />
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="150sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사용할 서비스를\n선택하세요"
+            android:fontFamily="@font/poppins_main"
+            android:textSize="36sp"
+            android:textColor="#000E08"
+            android:layout_marginHorizontal="50sp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20sp">
+
+            <RadioButton
+                android:id="@+id/radio_chatting"
+                android:checked="true"
+                android:layout_width="132sp"
+                android:layout_height="50sp"
+                android:text="Chatting"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_main"
+                android:background="@drawable/selector_radio_button"
+                android:button="@null"
+                android:textColor="@drawable/selector_radio_text" />
+
+            <View
+                android:layout_width="15sp"
+                android:layout_height="0sp"/>
+
+            <RadioButton
+                android:id="@+id/radio_chatbot"
+                android:layout_width="132sp"
+                android:layout_height="50sp"
+                android:text="Chatbot"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_main"
+                android:background="@drawable/selector_radio_button"
+                android:button="@null"
+                android:textColor="@drawable/selector_radio_text"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="입장하기"
+            android:fontFamily="@font/poppins_main"
+            android:textSize="18sp"
+            android:textColor="#000E08"
+            android:background="@drawable/button_rounded_corner_rectangle"
+            android:layout_marginTop="30sp"
+            android:layout_marginHorizontal="50sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

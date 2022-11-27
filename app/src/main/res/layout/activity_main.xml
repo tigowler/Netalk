@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+<!-- head title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Nickname"
+            android:textSize="18sp"
+            android:textColor="#000E08"
+            android:fontFamily="@font/poppins_main"
+            android:textAlignment="center"
+            android:paddingHorizontal="50sp"
+            >
+        </TextView>
+    </LinearLayout>
+
+
+<!--    divider  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:paddingHorizontal="50sp">
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="0.4"
+            />
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="150sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50sp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임을\n입력하세요"
+                android:fontFamily="@font/poppins_main"
+                android:textSize="36sp"
+                android:textColor="#000E08"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/text_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미 사용 중인\n닉네임입니다 😥 "
+                android:fontFamily="@font/poppins_main"
+                android:textSize="14sp"
+                android:textColor="#000E08"
+                android:background="@drawable/warning_nickname_rectangle"
+                android:paddingHorizontal="15sp"
+                android:paddingVertical="5sp"
+                android:layout_marginRight="50sp"
+                android:layout_marginBottom="5sp"
+                android:layout_gravity="bottom"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a Nickname"
+            android:fontFamily="@font/poppins_main"
+            android:textColor="#000E08"
+            android:background="@drawable/edittext_rounded_corner_rectangle"
+            android:paddingVertical="10sp"
+            android:paddingHorizontal="15sp"
+            android:elevation="5sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginHorizontal="50sp"
+            />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="중복 확인"
+            android:fontFamily="@font/poppins_main"
+            android:textSize="18sp"
+            android:textColor="#000E08"
+            android:background="@drawable/button_rounded_corner_rectangle"
+            android:layout_marginTop="30sp"
+            android:layout_marginHorizontal="50sp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

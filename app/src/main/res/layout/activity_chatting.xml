@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!-- head title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50sp"
+        android:paddingHorizontal="50sp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back_chatting"
+            android:layout_width="wrap_content"
+            android:layout_height="16sp"
+            android:src="@drawable/icon_back_arrow"
+            android:background="@android:color/transparent"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="              Chatting Service"
+            android:textSize="18sp"
+            android:textColor="#000E08"
+            android:fontFamily="@font/poppins_main"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <!--    divider  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20sp"
+        android:paddingHorizontal="50sp">
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:background="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="0.4"
+            />
+
+        <View
+            android:background="#E8E6EA"
+            android:layout_width="0dp"
+            android:layout_height="2sp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <!--대화창-->
+    <LinearLayout
+        android:id="@+id/layout_chatting_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="50sp"
+        android:paddingTop="30sp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!--입장 문구-->
+        <LinearLayout
+            android:id="@+id/layout_enter_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5sp">
+
+            <TextView
+                android:id="@+id/text_enter_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이연수"
+                android:fontFamily="@font/poppins_main"
+                android:textSize="14sp"
+                android:textColor="#000E08"
+                android:textFontWeight="700"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="님이 입장하셨습니다."
+                android:fontFamily="@font/poppins_main"
+                android:textSize="14sp"
+                android:textColor="#000E08"
+                android:layout_marginLeft="2sp"
+                />
+        </LinearLayout>
+
+        <!--받은 대화창-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp">
+
+            <!--프로필 사진과 사용자 이름-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="42sp"
+                    android:layout_height="42sp"
+                    android:src="@drawable/user"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이연수"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#000E08"
+                    android:layout_marginTop="5sp"
+                    android:textFontWeight="700"/>
+
+            </LinearLayout>
+
+            <!--대화 내용과 시간-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="안녕 : )\n요새 뭐하고 지내 ?"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#000E08"
+                    android:background="@drawable/textbox_receive_rectangle"
+                    android:paddingHorizontal="15sp"
+                    android:paddingVertical="5sp"
+                    android:layout_marginBottom="3sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:55 PM"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:paddingLeft="5sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--보낸 대화창-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10sp"
+            android:gravity="end"
+            android:layout_gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="안녕 연수야 너 프사 잘 나왔다ㅋㅋ"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#000E08"
+                    android:background="@drawable/textbox_send_rectangle"
+                    android:paddingHorizontal="15sp"
+                    android:paddingVertical="5sp"
+                    android:layout_marginBottom="3sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:55 PM"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:paddingLeft="5sp"/>
+
+        </LinearLayout>
+
+        <!--받은 대화창-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp">
+
+            <!--프로필 사진과 사용자 이름-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="42sp"
+                    android:layout_height="42sp"
+                    android:src="@drawable/user"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="조은비"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#000E08"
+                    android:layout_marginTop="5sp"
+                    android:textFontWeight="700"/>
+
+            </LinearLayout>
+
+            <!--대화 내용과 시간-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="엥 내가 더 잘 나온 것 같은데 ;;"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#000E08"
+                    android:background="@drawable/textbox_receive_rectangle"
+                    android:paddingHorizontal="15sp"
+                    android:paddingVertical="5sp"
+                    android:layout_marginBottom="3sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:55 PM"
+                    android:fontFamily="@font/poppins_main"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:paddingLeft="5sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--보낸 대화창-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10sp"
+            android:gravity="end"
+            android:layout_gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="딱히 아닌데"
+                android:fontFamily="@font/poppins_main"
+                android:textSize="14sp"
+                android:textColor="#000E08"
+                android:background="@drawable/textbox_send_rectangle"
+                android:paddingHorizontal="15sp"
+                android:paddingVertical="5sp"
+                android:layout_marginBottom="3sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:55 PM"
+                android:fontFamily="@font/poppins_main"
+                android:textSize="14sp"
+                android:textColor="#999999"
+                android:paddingLeft="5sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    하단 채팅 입력창과 보내기 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:paddingVertical="10sp"
+        android:paddingHorizontal="30sp"
+        android:layout_marginBottom="25sp">
+
+<!--        채팅 입력창과 파일 첨부 버튼 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_input_rounded_rectangle"
+            android:orientation="horizontal"
+            android:paddingStart="15sp"
+            android:layout_weight="1"
+            android:layout_marginRight="5sp"
+            >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="메시지를 입력하세요."
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_main"
+                android:background="@android:color/transparent"
+                android:textColor="#000E08"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_clip"
+                android:background="@android:color/transparent"
+                android:layout_weight="0.3"/>
+
+        </LinearLayout>
+
+<!--        보내기 버튼-->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_send"
+            android:background="@drawable/chat_input_rounded_rectangle"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+</LinearLayout>
