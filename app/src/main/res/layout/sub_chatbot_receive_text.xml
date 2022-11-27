@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="10sp">
+
+    <ImageView
+        android:layout_width="42sp"
+        android:layout_height="42sp"
+        android:src="@drawable/ic_chatbot"/>
+
+    <!--대화 내용과 시간-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥오늘의 메뉴🔥\n\n 쉑쉑버거 어때요?👍 "
+            android:fontFamily="@font/poppins_main"
+            android:textSize="14sp"
+            android:textColor="#000E08"
+            android:background="@drawable/textbox_receive_rectangle"
+            android:paddingHorizontal="15sp"
+            android:paddingVertical="5sp"
+            android:layout_marginBottom="3sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2:55 PM"
+            android:fontFamily="@font/poppins_main"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:paddingLeft="5sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

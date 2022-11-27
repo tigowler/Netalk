@@ -29,6 +29,7 @@ public class ChatActivity extends AppCompatActivity {
         LinearLayout layoutChatBody = (LinearLayout)findViewById(R.id.layout_chatting_body);
         ImageButton btnSend = findViewById(R.id.btn_send);
         EditText editTextChat = findViewById(R.id.edittext_chat);
+        ImageButton btnFile = findViewById(R.id.btn_file);
 
 //        1) TODO: 입장 시 입장 문구 출력
         layoutChatBody.addView(createEnterTextView(nickname));
@@ -45,6 +46,8 @@ public class ChatActivity extends AppCompatActivity {
                 String time = "PM";
 //                2-3) edittext 값과 시간 값 반영하여 채팅 view 추가하기
                 layoutChatBody.addView(createSendChatView(chat, hour, minute, time));
+//                2-4) edittext 비우기
+                editTextChat.setText("");
             }
         });
 
@@ -58,8 +61,15 @@ public class ChatActivity extends AppCompatActivity {
 //        3-2) 채팅 내용 반영하여 채팅 view 추가하기
         layoutChatBody.addView(createReceiveChatView(senderNickname, chatBody, hour, minute, time));
 
+//        4) TODO: 파일 전송 버튼 클릭 시, 파일 화면 열기
+        btnFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-//        4) 뒤로 버튼 누르면 mainActivity로 이동
+            }
+        });
+
+//        5) 뒤로 버튼 누르면 mainActivity로 이동
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

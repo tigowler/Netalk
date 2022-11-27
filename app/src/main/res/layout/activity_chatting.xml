@@ -64,16 +64,23 @@
     </LinearLayout>
 
     <!--대화창-->
-    <LinearLayout
-        android:id="@+id/layout_chatting_body"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="50sp"
-        android:paddingTop="30sp"
-        android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        >
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_chatting_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50sp"
+            android:paddingTop="30sp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        </LinearLayout>
+    </ScrollView>
 
 <!--    하단 채팅 입력창과 보내기 버튼-->
     <LinearLayout
@@ -109,6 +116,7 @@
                 />
 
             <ImageButton
+                android:id="@+id/btn_file"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/icon_clip"
