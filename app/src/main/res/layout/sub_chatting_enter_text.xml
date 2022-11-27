@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이연수"
+        android:fontFamily="@font/poppins_main"
+        android:textSize="14sp"
+        android:textColor="#000E08"
+        android:textFontWeight="700"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="님이 입장하셨습니다."
+        android:fontFamily="@font/poppins_main"
+        android:textSize="14sp"
+        android:textColor="#000E08"
+        android:layout_marginLeft="2sp"
+        />
+
+</LinearLayout>
