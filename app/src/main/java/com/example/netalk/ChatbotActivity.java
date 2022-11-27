@@ -36,6 +36,7 @@ public class ChatbotActivity extends AppCompatActivity {
                 layoutChatbotBody.addView(createSendNumView(num, hour, minute, time));
 //                1-4) edittext 비우기
                 editTextChatbot.setText("");
+//                1-5) TODO: 스크롤뷰 자동 하단 스크롤 시간 남으면 고려해보기: https://gigas-blog.tistory.com/158
             }
         });
 
