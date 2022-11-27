@@ -1,10 +1,15 @@
 package com.example.netalk;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.OpenableColumns;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +19,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ChatActivity extends AppCompatActivity {
+
+    private static final int REQ_CODE = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +73,9 @@ public class ChatActivity extends AppCompatActivity {
         btnFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent().setType("*/*").setAction(Intent.ACTION_OPEN_DOCUMENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                startActivityForResult(Intent.createChooser(intent, "Select a file"), REQ_CODE);
             }
         });
 
@@ -77,6 +87,29 @@ public class ChatActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQ_CODE && resultCode==RESULT_OK){
+            Uri selectedFile = data.getData(); // The uri with the location of the file
+//            경로 정보: selectedFile.getPath();, 전체 URI 정보: selectedFile.toString()
+            Toast.makeText(getApplicationContext(), getFileNameFromUri(selectedFile)+"가 업로드 되었습니다.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @SuppressLint("Range")
+    private String getFileNameFromUri(Uri uri) {
+        String fileName = "";
+
+        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        if(cursor!=null && cursor.moveToFirst()){
+            fileName = cursor.getString(
+                    cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
+        }
+        cursor.close();
+        return fileName;
     }
 
     private LinearLayout createReceiveChatView(String senderNickname, String chatBody, String hour, String minute, String time) {
