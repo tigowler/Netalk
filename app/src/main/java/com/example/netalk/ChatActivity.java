@@ -40,6 +40,8 @@ public class ChatActivity extends AppCompatActivity {
         ImageButton btnFile = findViewById(R.id.btn_file);
 
 //        1) TODO: 입장 시 입장 문구 출력
+//        1-1) TODO: 서버에게 입장했다는 요청-응답 받기
+//        1-2) 이후 뷰 추가
         layoutChatBody.addView(createEnterTextView(nickname));
 
 //        2) 채팅 입력
@@ -79,14 +81,28 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-//        5) 뒤로 버튼 누르면 mainActivity로 이동
+//        5) 뒤로 버튼 누르면 퇴장 문구 출력 후 mainActivity로 이동
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                5-1) TODO: 서버에게 socket.close 관련 나가기 요청-응답
+//                5-2) 퇴장 문구 출력
+                layoutChatBody.addView(createExitTextView(nickname));
+//                5-3) 화면 이동
                 Intent intent = new Intent(ChatActivity.this, SelectActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    private LinearLayout createExitTextView(String nickname) {
+        LinearLayout exitTextLayout = (LinearLayout)View.inflate(this, R.layout.sub_chatting_enter_text, null);
+        TextView exitedNickname = (TextView) exitTextLayout.getChildAt(0);
+        exitedNickname.setText(nickname);
+
+        TextView exitTextView = (TextView)exitTextLayout.getChildAt(1);
+        exitTextView.setText("님이 퇴장하셨습니다.");
+        return exitTextLayout;
     }
 
     @Override
