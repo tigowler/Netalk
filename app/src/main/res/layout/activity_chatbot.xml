@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1️⃣ 오늘의 명언을 알려주세요.\n2️⃣ 점심 메뉴를 추천해주세요.\n3️⃣ 오늘의 날씨가 궁금해요."
+                    android:text="1️⃣ 오늘의 명언을 알려주세요.\n2️⃣ 점심 메뉴를 추천해주세요.\n3️⃣ 오늘의 운세가 궁금해요."
                     android:fontFamily="@font/poppins_main"
                     android:textSize="14sp"
                     android:textColor="#000E08"
